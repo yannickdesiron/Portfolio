@@ -1,26 +1,216 @@
-@import "tailwindcss";
+/* src/app/global.css */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Theme (default) using Palette 1: Clean Greens */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #FFFFFF;
+  --color-sec: #ECECEC;
+  --color-text: #333333;
+  --color-accent: #00B894;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark Theme override - will be activated by adding a data attribute on the <html> or <body> */
+[data-theme="dark"] {
+  --color-bg: #1E1E1E;
+  --color-sec: #2A2A2A;
+  --color-text: #ECECEC;
+  --color-accent: #00B894;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global resets and defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Apply light theme background */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    155deg,
+    rgba(236, 236, 236, 1) 0%,
+    rgba(202, 222, 218, 1) 38%,
+    rgba(236, 236, 236, 1) 100%
+  );
+  color: var(--color-text);
+  font-family: var(--font-poppins), sans-serif;
+  line-height: 1.6;
+}
+
+/* Dark Theme styles - triggered by next-themes when dark class is on <html> */
+[data-theme="dark"] body {
+  background: linear-gradient(
+    155deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 57, 46, 1) 38%,
+    rgba(42, 42, 42, 1) 100%
+  );
+  color: var(--color-text);
+}
+
+
+/*body {
+  background: linear-gradient(155deg, rgba(30,30,30,1) 0%, rgba(0,57,46,1) 38%, rgba(42,42,42,1) 100%);
+  color: var(--color-text);
+  font-family: var(--font-poppins), sans-serif;
+  line-height: 1.6;
+}*/
+
+
+/* Example element styles */
+/*
+.header {
+  background-color: var(--color-sec);
+  padding: 20px;
+  text-align: center;
+}*/
+
+.button {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #009e7a; /* A slightly darker shade for hover */
+}
+
+/* Global.css additions for the NavBar */
+/*
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(30,30,30,0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand .brand-name {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-menu .menu-item {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-menu .menu-item:hover {
+  color: var(--color-accent);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-link {
+  color: var(--color-text);
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 4px;
+  transition: color 0.3s;
+}
+
+.theme-toggle-button:hover {
+  color: var(--color-accent);
+}*/
+
+/* Styles for NavBarFloat */
+/*
+.navbar-float {
+  width: 90%;
+  max-width: 2000px;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: var(--color-bg); 
+  border: 1px solid var(--color-sec);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-float-brand .brand-name {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar-float-menu {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar-float-menu .menu-item {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-float-menu .menu-item:hover {
+  color: var(--color-accent);
+}
+
+.navbar-float-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}*/
+
+.social-link {
+  color: var(--color-text);
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 4px;
+  transition: color 0.3s;
+}
+
+.theme-toggle-button:hover {
+  color: var(--color-accent);
 }
