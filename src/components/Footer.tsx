@@ -10,7 +10,7 @@ export default function Footer() {
       >
         
         <p style={{ color: "var(--color-text)", fontSize: "0.9rem" }}>
-          © {new Date().getFullYear()} Yannick Desiron. All rights reserved.
+          © {new Date().getFullYear()} Yannick Desiron - All rights reserved.
         </p>
       </footer>
     );
