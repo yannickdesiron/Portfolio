@@ -9,6 +9,7 @@
     "lint": "next lint",
     "serve": "node index.js"
   },
+  "main": "index.js",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@heroui/card": "^2.2.15",
