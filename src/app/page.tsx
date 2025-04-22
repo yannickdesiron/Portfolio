@@ -1,5 +1,6 @@
 'use client'
 
+import AboutMeSection from "@/components/AboutMeSection";
 import LanguageSlider from "@/components/LanguageSlider";
 import ProjectsSection from "@/components/ProjectSection";
 import Image from "next/image";
@@ -54,6 +55,8 @@ export default function Home() {
       {/* Projects Section */}
 
       <ProjectsSection />
+
+      <AboutMeSection />
     </div>
   );
 }
