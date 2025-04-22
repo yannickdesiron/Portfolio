@@ -13,17 +13,17 @@ const AboutMeSection = () => {
       <div className="max-w-[1000px] mx-auto text-[--color-text] text-lg leading-relaxed text-left">
         <p className="mb-4">
           Hey! I&apos;m Yannick Desiron, a former professional basketball player turned software developer.
-          I’m currently finishing my final year in a 3-year programming track at Thomas More, while
+          I&apos;m currently finishing my final year in a 3-year programming track at Thomas More, while
           building out real-world web applications with modern frameworks like React and Next.js.
         </p>
         <p className="mb-4">
           My background in high-level sports has shaped me to work well under pressure, communicate effectively,
-          and continuously strive to improve. I'm passionate about clean, accessible UI and love building
+          and continuously strive to improve. I&apos;m passionate about clean, accessible UI and love building
           modern, dynamic applications that people enjoy using.
         </p>
         <p>
           Whether it&apos;s creating a sleek portfolio site, crafting reusable components, or learning new tech,
-          I’m always eager to learn and grow as a developer.
+          I&apos;m always eager to learn and grow as a developer.
         </p>
       </div>
     </section>
